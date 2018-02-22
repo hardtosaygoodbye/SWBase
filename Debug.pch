@@ -1,0 +1,43 @@
+//
+//  DebugPrefixHeader.pch
+//  daqinjia
+//
+//  Created by Willow Ma on 2017/10/11.
+//  Copyright © 2017年 Willow Ma. All rights reserved.
+//
+
+#ifndef DebugPrefixHeader_pch
+#define DebugPrefixHeader_pch
+
+/*----------界面布置----------*/
+//屏幕宽度
+#define kScreenWidth ([UIScreen mainScreen].bounds.size.width)
+//屏幕高度
+#define kScreenHeight ([UIScreen mainScreen].bounds.size.height)
+//状态栏高度
+#define kStatusHeight 20
+//导航栏高度
+#define kNavHeight 44
+//标签栏
+#define kTabBarHeight 49
+/*----------Masonry----------*/
+#define MAS_SHORTHAND
+#define MAS_SHORTHAND_GLOBALS
+/*----------色彩管理----------*/
+//颜色快速生成
+#define rgb(r,g,b,a) ([UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a])
+//主色调
+#define kFirstColor ([UIColor colorWithRed:60/255.0 green:187/255.0 blue:153/255.0 alpha:1])
+//副色调
+#define kSecondColor ([UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1])
+#define kThirdColor ([UIColor colorWithRed:189/255.0 green:195/255.0 blue:199/255.0 alpha:1])
+/*----------网络管理----------*/
+//请求头
+#define urlHeader (@"http://192.168.1.103:8000/yidu/api/v1/")
+#define urlImgHeader (@"https://images.daqinjia.cn/")
+/*----------二维码----------*/
+#define LBXScan_Define_ZXing   //下载了ZXing模块
+#define LBXScan_Define_Native  //下载了native模块
+#define LBXScan_Define_UI     //下载了界面模块
+
+#endif /* DebugPrefixHeader_pch */
