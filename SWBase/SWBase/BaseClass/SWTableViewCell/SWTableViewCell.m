@@ -18,7 +18,11 @@
     return self;
 }
 
-- (NSString *)reuseId{
++ (SWTableViewCell *)cell {
+    return [[self alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:[self reuseId]];
+}
+
++ (NSString *)reuseId{
     return NSStringFromClass([self class]);
 }
 

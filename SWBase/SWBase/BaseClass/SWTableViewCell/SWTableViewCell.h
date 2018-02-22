@@ -11,6 +11,8 @@
 
 @interface SWTableViewCell : UITableViewCell <SWTableViewCellProtocol>
 
-- (NSString *)reuseId;
++ (NSString *)reuseId;
+
++ (SWTableViewCell *)cell;
 
 @end
