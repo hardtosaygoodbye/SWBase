@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "SWViewModelProtocol.h"
+#import <ReactiveObjC.h>
+#import "SWNetworkManager.h"
 
 @interface SWViewModel : NSObject <SWViewModelProtocol>
-
 
 @end

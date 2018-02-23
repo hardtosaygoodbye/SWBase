@@ -10,9 +10,6 @@
 
 @protocol SWViewModelProtocol <NSObject>
 
-@optional
-- (instancetype)initWithModel:(NSObject *)model;
-
 - (void)sw_initialize;
 
 @end

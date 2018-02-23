@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72048265203F223C008CC286 /* VerifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72048264203F223C008CC286 /* VerifyViewController.m */; };
+		7204826D203F2358008CC286 /* SWNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7204826C203F2358008CC286 /* SWNetworkManager.m */; };
+		72048273203FAC41008CC286 /* SWUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 72048272203FAC41008CC286 /* SWUI.m */; };
+		72048277203FB159008CC286 /* SWTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 72048276203FB159008CC286 /* SWTextField.m */; };
+		7204827B203FB6C1008CC286 /* SWButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7204827A203FB6C1008CC286 /* SWButton.m */; };
+		7204827E203FBF09008CC286 /* VerifyViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7204827D203FBF09008CC286 /* VerifyViewModel.m */; };
 		72195964203E8D14007E813F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72195963203E8D14007E813F /* AppDelegate.m */; };
-		72195967203E8D14007E813F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72195966203E8D14007E813F /* ViewController.m */; };
 		7219596A203E8D14007E813F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72195968203E8D14007E813F /* Main.storyboard */; };
 		7219596C203E8D14007E813F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7219596B203E8D14007E813F /* Assets.xcassets */; };
 		7219596F203E8D14007E813F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7219596D203E8D14007E813F /* LaunchScreen.storyboard */; };
@@ -25,11 +30,22 @@
 /* Begin PBXFileReference section */
 		6F795E9463A810D043F46C4F /* libPods-SWBase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SWBase.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		705303F55EFCCD7DB80B7CAF /* Pods-SWBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWBase.release.xcconfig"; path = "Pods/Target Support Files/Pods-SWBase/Pods-SWBase.release.xcconfig"; sourceTree = "<group>"; };
+		72048263203F223C008CC286 /* VerifyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VerifyViewController.h; sourceTree = "<group>"; };
+		72048264203F223C008CC286 /* VerifyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VerifyViewController.m; sourceTree = "<group>"; };
+		7204826A203F2358008CC286 /* SWNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWNetworkManager.h; sourceTree = "<group>"; };
+		7204826B203F2358008CC286 /* URL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URL.h; sourceTree = "<group>"; };
+		7204826C203F2358008CC286 /* SWNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWNetworkManager.m; sourceTree = "<group>"; };
+		72048271203FAC41008CC286 /* SWUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWUI.h; sourceTree = "<group>"; };
+		72048272203FAC41008CC286 /* SWUI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWUI.m; sourceTree = "<group>"; };
+		72048275203FB159008CC286 /* SWTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWTextField.h; sourceTree = "<group>"; };
+		72048276203FB159008CC286 /* SWTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWTextField.m; sourceTree = "<group>"; };
+		72048279203FB6C1008CC286 /* SWButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWButton.h; sourceTree = "<group>"; };
+		7204827A203FB6C1008CC286 /* SWButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWButton.m; sourceTree = "<group>"; };
+		7204827C203FBF09008CC286 /* VerifyViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VerifyViewModel.h; sourceTree = "<group>"; };
+		7204827D203FBF09008CC286 /* VerifyViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VerifyViewModel.m; sourceTree = "<group>"; };
 		7219595F203E8D14007E813F /* SWBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72195962203E8D14007E813F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		72195963203E8D14007E813F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		72195965203E8D14007E813F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		72195966203E8D14007E813F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		72195969203E8D14007E813F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7219596B203E8D14007E813F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7219596E203E8D14007E813F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -77,6 +93,89 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		72048262203F21FE008CC286 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				72048266203F2246008CC286 /* Verify */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		72048266203F2246008CC286 /* Verify */ = {
+			isa = PBXGroup;
+			children = (
+				7204826F203FA6C3008CC286 /* ViewModel */,
+				72048267203F2255008CC286 /* Controller */,
+			);
+			path = Verify;
+			sourceTree = "<group>";
+		};
+		72048267203F2255008CC286 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				72048263203F223C008CC286 /* VerifyViewController.h */,
+				72048264203F223C008CC286 /* VerifyViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		72048268203F2322008CC286 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				7204826E203F24AA008CC286 /* UI */,
+				72048269203F2358008CC286 /* Network */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		72048269203F2358008CC286 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				7204826A203F2358008CC286 /* SWNetworkManager.h */,
+				7204826B203F2358008CC286 /* URL.h */,
+				7204826C203F2358008CC286 /* SWNetworkManager.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		7204826E203F24AA008CC286 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				72048278203FB687008CC286 /* SWButton */,
+				72048274203FB124008CC286 /* SWTextField */,
+				72048271203FAC41008CC286 /* SWUI.h */,
+				72048272203FAC41008CC286 /* SWUI.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		7204826F203FA6C3008CC286 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7204827C203FBF09008CC286 /* VerifyViewModel.h */,
+				7204827D203FBF09008CC286 /* VerifyViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		72048274203FB124008CC286 /* SWTextField */ = {
+			isa = PBXGroup;
+			children = (
+				72048275203FB159008CC286 /* SWTextField.h */,
+				72048276203FB159008CC286 /* SWTextField.m */,
+			);
+			path = SWTextField;
+			sourceTree = "<group>";
+		};
+		72048278203FB687008CC286 /* SWButton */ = {
+			isa = PBXGroup;
+			children = (
+				72048279203FB6C1008CC286 /* SWButton.h */,
+				7204827A203FB6C1008CC286 /* SWButton.m */,
+			);
+			path = SWButton;
+			sourceTree = "<group>";
+		};
 		72195956203E8D14007E813F = {
 			isa = PBXGroup;
 			children = (
@@ -101,12 +200,9 @@
 				72195985203EBFC8007E813F /* Debug.pch */,
 				72195986203EBFC8007E813F /* Release.pch */,
 				72195978203E8D21007E813F /* SWBase */,
-				72195962203E8D14007E813F /* AppDelegate.h */,
-				72195963203E8D14007E813F /* AppDelegate.m */,
-				72195965203E8D14007E813F /* ViewController.h */,
-				72195966203E8D14007E813F /* ViewController.m */,
-				72195968203E8D14007E813F /* Main.storyboard */,
+				72048262203F21FE008CC286 /* Demo */,
 				7219596B203E8D14007E813F /* Assets.xcassets */,
+				72195968203E8D14007E813F /* Main.storyboard */,
 				7219596D203E8D14007E813F /* LaunchScreen.storyboard */,
 				72195970203E8D14007E813F /* Info.plist */,
 				72195971203E8D14007E813F /* main.m */,
@@ -117,6 +213,7 @@
 		72195978203E8D21007E813F /* SWBase */ = {
 			isa = PBXGroup;
 			children = (
+				72048268203F2322008CC286 /* Util */,
 				72195980203EA81A007E813F /* BaseClass */,
 				72195979203E8D33007E813F /* AppDelegate */,
 			);
@@ -126,6 +223,8 @@
 		72195979203E8D33007E813F /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
+				72195962203E8D14007E813F /* AppDelegate.h */,
+				72195963203E8D14007E813F /* AppDelegate.m */,
 				7219597A203E8D63007E813F /* SWStartApp.h */,
 				7219597B203E8D63007E813F /* SWStartApp.m */,
 				7219597D203EA7AF007E813F /* SWThirdService.h */,
@@ -321,14 +420,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7204827B203FB6C1008CC286 /* SWButton.m in Sources */,
 				72195984203EB609007E813F /* SWViewController.m in Sources */,
+				72048273203FAC41008CC286 /* SWUI.m in Sources */,
+				7204827E203FBF09008CC286 /* VerifyViewModel.m in Sources */,
+				72048265203F223C008CC286 /* VerifyViewController.m in Sources */,
+				72048277203FB159008CC286 /* SWTextField.m in Sources */,
 				7219597F203EA7AF007E813F /* SWThirdService.m in Sources */,
 				72195998203EE3A9007E813F /* SWTableViewCell.m in Sources */,
 				7219597C203E8D63007E813F /* SWStartApp.m in Sources */,
-				72195967203E8D14007E813F /* ViewController.m in Sources */,
 				72195972203E8D14007E813F /* main.m in Sources */,
 				72195989203EC686007E813F /* SWView.m in Sources */,
 				7219598C203EC81D007E813F /* SWViewModel.m in Sources */,
+				7204826D203F2358008CC286 /* SWNetworkManager.m in Sources */,
 				72195964203E8D14007E813F /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -5,7 +5,7 @@ target 'SWBase' do
 pod 'Masonry'
 pod 'AFNetworking'
 pod 'MJRefresh'
-pod 'Toast'
 pod 'ReactiveObjC'
+pod 'MBProgressHUD'
 
 end

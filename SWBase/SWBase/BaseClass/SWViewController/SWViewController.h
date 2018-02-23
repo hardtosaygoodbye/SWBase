@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SWViewControllerProtocol.h"
+#import "SWUI.h"
 
 @interface SWViewController : UIViewController <SWViewControllerProtocol>
 

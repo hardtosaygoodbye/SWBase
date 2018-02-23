@@ -33,7 +33,7 @@
 #define kThirdColor ([UIColor colorWithRed:189/255.0 green:195/255.0 blue:199/255.0 alpha:1])
 /*----------网络管理----------*/
 //请求头
-#define urlHeader (@"http://www.phycheworld.cn/api/v1/")
-#define urlImgHeader (@"https://images.daqinjia.cn/")
+#define urlHeader (@"")
+#define urlImgHeader (@"")
 
 #endif /* ReleasePrefixHeader_pch */

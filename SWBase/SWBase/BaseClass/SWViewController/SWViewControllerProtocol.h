@@ -14,4 +14,7 @@
 
 - (void)sw_bindViewModel;
 
+@optional
+- (void)sw_loadNavigationStyle;
+
 @end
