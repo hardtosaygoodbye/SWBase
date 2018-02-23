@@ -24,7 +24,10 @@
     return self;
 }
 
-- (void)sw_loadUI{}
+- (void)sw_loadUI{
+    [self setNeedsUpdateConstraints];
+    [self updateConstraintsIfNeeded];
+}
 
 - (void)sw_bindViewModel{}
 

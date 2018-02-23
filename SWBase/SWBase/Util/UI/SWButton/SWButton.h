@@ -15,6 +15,6 @@ typedef NS_ENUM(NSInteger,SWButtonStyle){
     SWButtonStyleHollow
 };
 
-+ (SWButton *)buttonWithTitle:(NSString *)title fontsize:(CGFloat)size color:(UIColor *)color sytle:(SWButtonStyle)style;
++ (SWButton *)buttonWithTitle:(NSString *)title fontsize:(CGFloat)size color:(UIColor *)color sytle:(SWButtonStyle)style fView:(UIView *)fview;
 
 @end

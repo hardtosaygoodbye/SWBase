@@ -17,6 +17,13 @@
     return self;
 }
 
+- (instancetype)initWithModel:(NSObject *)model{
+    if (self = [super init]) {
+        [self sw_initialize];
+    }
+    return self;
+}
+
 - (void)sw_initialize{}
 
 @end

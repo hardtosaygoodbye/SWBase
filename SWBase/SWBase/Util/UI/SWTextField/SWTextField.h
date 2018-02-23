@@ -13,6 +13,6 @@
 @property (nonatomic,strong) UILabel *titleLabel;
 @property (nonatomic,strong) UITextField *textField;
 
-+ (instancetype)textFieldWithTitle:(NSString *)title;
++ (instancetype)textFieldWithTitle:(NSString *)title fView:(UIView *)fView;
 
 @end

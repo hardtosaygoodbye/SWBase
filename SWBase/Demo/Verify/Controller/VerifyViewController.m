@@ -15,6 +15,7 @@
 @property (nonatomic,weak) SWTextField *codeTextField;
 @property (nonatomic,weak) SWButton *startButton;
 @property (nonatomic,strong) VerifyViewModel *viewModel;
+
 @end
 
 @implementation VerifyViewController
@@ -27,35 +28,31 @@
 }
 
 - (void)sw_loadUI{
-    SWTextField *phoneTextField = [SWTextField textFieldWithTitle:@"手机号"];
-    [self.view addSubview:phoneTextField];
-    [phoneTextField makeConstraints:^(MASConstraintMaker *make) {
+    self.phoneTextField = [SWTextField textFieldWithTitle:@"手机号" fView:self.view];
+    self.codeTextField = [SWTextField textFieldWithTitle:@"验证码" fView:self.view];
+    self.startButton = [SWButton buttonWithTitle:@"开始" fontsize:14 color:kFirstColor sytle:0 fView:self.view];
+}
+
+- (void)updateViewConstraints{
+    [self.phoneTextField updateConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view).offset(10);
         make.right.equalTo(self.view).offset(-10);
         make.top.equalTo(self.view).offset(10);
         make.height.equalTo(@40);
     }];
-    self.phoneTextField = phoneTextField;
-    
-    SWTextField *codeTextField = [SWTextField textFieldWithTitle:@"验证码"];
-    [self.view addSubview:codeTextField];
-    [codeTextField makeConstraints:^(MASConstraintMaker *make) {
+    [self.codeTextField updateConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view).offset(10);
         make.right.equalTo(self.view).offset(-10);
-        make.top.equalTo(phoneTextField.bottom).offset(10);
+        make.top.equalTo(self.phoneTextField.bottom).offset(10);
         make.height.equalTo(@40);
     }];
-    self.codeTextField = codeTextField;
-    
-    SWButton *startButton = [SWButton buttonWithTitle:@"开始" fontsize:14 color:kFirstColor sytle:SWButtonStyleSolid];
-    [self.view addSubview:startButton];
-    [startButton makeConstraints:^(MASConstraintMaker *make) {
+    [self.startButton updateConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view).offset(10);
         make.right.equalTo(self.view).offset(-10);
-        make.top.equalTo(codeTextField.bottom).offset(10);
+        make.top.equalTo(self.codeTextField.bottom).offset(10);
         make.height.equalTo(@40);
     }];
-    self.startButton = startButton;
+    [super updateViewConstraints];
 }
 
 - (void)sw_bindViewModel{

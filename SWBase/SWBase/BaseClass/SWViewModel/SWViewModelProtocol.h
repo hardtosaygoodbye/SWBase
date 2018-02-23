@@ -12,4 +12,7 @@
 
 - (void)sw_initialize;
 
+@optional
+- (instancetype)initWithModel:(NSObject *)model;
+
 @end

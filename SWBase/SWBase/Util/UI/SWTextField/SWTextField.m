@@ -11,16 +11,17 @@
 
 @implementation SWTextField
 
-- (instancetype)initWithTitle:(NSString *)title{
+- (instancetype)initWithTitle:(NSString *)title fView:(UIView *)fView{
     if (self = [super init]) {
         [self loadUI];
         self.titleLabel.text = title;
+        [fView addSubview:self];
     }
     return self;
 }
 
-+ (instancetype)textFieldWithTitle:(NSString *)title {
-    return [[self alloc] initWithTitle:title];
++ (instancetype)textFieldWithTitle:(NSString *)title fView:(UIView *)fView{
+    return [[self alloc] initWithTitle:title fView:fView];
 }
 
 - (void)loadUI{

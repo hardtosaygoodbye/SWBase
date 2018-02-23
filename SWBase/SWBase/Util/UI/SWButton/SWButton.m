@@ -10,7 +10,7 @@
 
 @implementation SWButton
 
-+ (UIButton *)buttonWithTitle:(NSString *)title fontsize:(CGFloat)size color:(UIColor *)color sytle:(SWButtonStyle)style{
++ (SWButton *)buttonWithTitle:(NSString *)title fontsize:(CGFloat)size color:(UIColor *)color sytle:(SWButtonStyle)style fView:(UIView *)fview{
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setTitle:title forState:UIControlStateNormal];
     btn.titleLabel.font = [UIFont systemFontOfSize:size];
@@ -30,6 +30,7 @@
         default:
             break;
     }
+    [fview addSubview:btn];
     return btn;
 }
 

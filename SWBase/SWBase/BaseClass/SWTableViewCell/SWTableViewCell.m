@@ -26,7 +26,10 @@
     return NSStringFromClass([self class]);
 }
 
-- (void)sw_loadUI{}
+- (void)sw_loadUI{
+    [self setNeedsUpdateConstraints];
+    [self updateConstraintsIfNeeded];
+}
 
 - (void)sw_bindViewModel{}
 
