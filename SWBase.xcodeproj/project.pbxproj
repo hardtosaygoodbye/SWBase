@@ -11,7 +11,6 @@
 		7204826D203F2358008CC286 /* SWNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7204826C203F2358008CC286 /* SWNetworkManager.m */; };
 		72048273203FAC41008CC286 /* SWUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 72048272203FAC41008CC286 /* SWUI.m */; };
 		72048277203FB159008CC286 /* SWTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 72048276203FB159008CC286 /* SWTextField.m */; };
-		7204827B203FB6C1008CC286 /* SWButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7204827A203FB6C1008CC286 /* SWButton.m */; };
 		7204827E203FBF09008CC286 /* VerifyViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7204827D203FBF09008CC286 /* VerifyViewModel.m */; };
 		72195964203E8D14007E813F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72195963203E8D14007E813F /* AppDelegate.m */; };
 		7219596A203E8D14007E813F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72195968203E8D14007E813F /* Main.storyboard */; };
@@ -24,6 +23,7 @@
 		72195989203EC686007E813F /* SWView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72195988203EC686007E813F /* SWView.m */; };
 		7219598C203EC81D007E813F /* SWViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7219598B203EC81D007E813F /* SWViewModel.m */; };
 		72195998203EE3A9007E813F /* SWTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72195997203EE3A9007E813F /* SWTableViewCell.m */; };
+		72596376204308750000BE89 /* SWButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 72596375204308750000BE89 /* SWButton.m */; };
 		F8E3FCDA6B2CC69D7D585EBB /* libPods-SWBase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F795E9463A810D043F46C4F /* libPods-SWBase.a */; };
 /* End PBXBuildFile section */
 
@@ -39,8 +39,6 @@
 		72048272203FAC41008CC286 /* SWUI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWUI.m; sourceTree = "<group>"; };
 		72048275203FB159008CC286 /* SWTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWTextField.h; sourceTree = "<group>"; };
 		72048276203FB159008CC286 /* SWTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWTextField.m; sourceTree = "<group>"; };
-		72048279203FB6C1008CC286 /* SWButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWButton.h; sourceTree = "<group>"; };
-		7204827A203FB6C1008CC286 /* SWButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWButton.m; sourceTree = "<group>"; };
 		7204827C203FBF09008CC286 /* VerifyViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VerifyViewModel.h; sourceTree = "<group>"; };
 		7204827D203FBF09008CC286 /* VerifyViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VerifyViewModel.m; sourceTree = "<group>"; };
 		7219595F203E8D14007E813F /* SWBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +67,8 @@
 		72195994203EE2F2007E813F /* SWTableViewCellProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWTableViewCellProtocol.h; sourceTree = "<group>"; };
 		72195996203EE3A9007E813F /* SWTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWTableViewCell.h; sourceTree = "<group>"; };
 		72195997203EE3A9007E813F /* SWTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWTableViewCell.m; sourceTree = "<group>"; };
+		72596374204308750000BE89 /* SWButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWButton.h; sourceTree = "<group>"; };
+		72596375204308750000BE89 /* SWButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWButton.m; sourceTree = "<group>"; };
 		7637562B64EAC165BE031725 /* Pods-SWBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWBase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SWBase/Pods-SWBase.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,7 +141,7 @@
 		7204826E203F24AA008CC286 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				72048278203FB687008CC286 /* SWButton */,
+				725963732043085D0000BE89 /* SWButton */,
 				72048274203FB124008CC286 /* SWTextField */,
 				72048271203FAC41008CC286 /* SWUI.h */,
 				72048272203FAC41008CC286 /* SWUI.m */,
@@ -167,15 +167,6 @@
 			path = SWTextField;
 			sourceTree = "<group>";
 		};
-		72048278203FB687008CC286 /* SWButton */ = {
-			isa = PBXGroup;
-			children = (
-				72048279203FB6C1008CC286 /* SWButton.h */,
-				7204827A203FB6C1008CC286 /* SWButton.m */,
-			);
-			path = SWButton;
-			sourceTree = "<group>";
-		};
 		72195956203E8D14007E813F = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +188,8 @@
 		72195961203E8D14007E813F /* SWBase */ = {
 			isa = PBXGroup;
 			children = (
+				72195962203E8D14007E813F /* AppDelegate.h */,
+				72195963203E8D14007E813F /* AppDelegate.m */,
 				72195985203EBFC8007E813F /* Debug.pch */,
 				72195986203EBFC8007E813F /* Release.pch */,
 				72195978203E8D21007E813F /* SWBase */,
@@ -215,22 +208,20 @@
 			children = (
 				72048268203F2322008CC286 /* Util */,
 				72195980203EA81A007E813F /* BaseClass */,
-				72195979203E8D33007E813F /* AppDelegate */,
+				72195979203E8D33007E813F /* StartApp */,
 			);
 			path = SWBase;
 			sourceTree = "<group>";
 		};
-		72195979203E8D33007E813F /* AppDelegate */ = {
+		72195979203E8D33007E813F /* StartApp */ = {
 			isa = PBXGroup;
 			children = (
-				72195962203E8D14007E813F /* AppDelegate.h */,
-				72195963203E8D14007E813F /* AppDelegate.m */,
 				7219597A203E8D63007E813F /* SWStartApp.h */,
 				7219597B203E8D63007E813F /* SWStartApp.m */,
 				7219597D203EA7AF007E813F /* SWThirdService.h */,
 				7219597E203EA7AF007E813F /* SWThirdService.m */,
 			);
-			path = AppDelegate;
+			path = StartApp;
 			sourceTree = "<group>";
 		};
 		72195980203EA81A007E813F /* BaseClass */ = {
@@ -282,6 +273,15 @@
 				72195997203EE3A9007E813F /* SWTableViewCell.m */,
 			);
 			path = SWTableViewCell;
+			sourceTree = "<group>";
+		};
+		725963732043085D0000BE89 /* SWButton */ = {
+			isa = PBXGroup;
+			children = (
+				72596374204308750000BE89 /* SWButton.h */,
+				72596375204308750000BE89 /* SWButton.m */,
+			);
+			path = SWButton;
 			sourceTree = "<group>";
 		};
 		AF9C5C82F60560C3C9D83C08 /* Frameworks */ = {
@@ -420,8 +420,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7204827B203FB6C1008CC286 /* SWButton.m in Sources */,
 				72195984203EB609007E813F /* SWViewController.m in Sources */,
+				72596376204308750000BE89 /* SWButton.m in Sources */,
 				72048273203FAC41008CC286 /* SWUI.m in Sources */,
 				7204827E203FBF09008CC286 /* VerifyViewModel.m in Sources */,
 				72048265203F223C008CC286 /* VerifyViewController.m in Sources */,

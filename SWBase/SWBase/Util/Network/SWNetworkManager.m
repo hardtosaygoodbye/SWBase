@@ -53,8 +53,8 @@ static AFHTTPSessionManager *afnManager = nil;
                 [subscriber sendCompleted];
                 [SWNetworkManager hideLoadingHUD];
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                NSError *resultError = [SWNetworkManager errorWithNetworkError:error];
-                [subscriber sendError:resultError];
+                [SWNetworkManager showErrorHUD:error];
+                [subscriber sendError:error];
                 [subscriber sendCompleted];
             }];
             return nil;
@@ -66,8 +66,8 @@ static AFHTTPSessionManager *afnManager = nil;
                 [subscriber sendCompleted];
                 [SWNetworkManager hideLoadingHUD];
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                NSError *resultError = [SWNetworkManager errorWithNetworkError:error];
-                [subscriber sendError:resultError];
+                [SWNetworkManager showErrorHUD:error];
+                [subscriber sendError:error];
                 [subscriber sendCompleted];
             }];
             return nil;
@@ -79,8 +79,8 @@ static AFHTTPSessionManager *afnManager = nil;
                 [subscriber sendCompleted];
                 [SWNetworkManager hideLoadingHUD];
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                NSError *resultError = [SWNetworkManager errorWithNetworkError:error];
-                [subscriber sendError:resultError];
+                [SWNetworkManager showErrorHUD:error];
+                [subscriber sendError:error];
                 [subscriber sendCompleted];
             }];
             return nil;
@@ -92,8 +92,8 @@ static AFHTTPSessionManager *afnManager = nil;
                 [subscriber sendCompleted];
                 [SWNetworkManager hideLoadingHUD];
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                NSError *resultError = [SWNetworkManager errorWithNetworkError:error];
-                [subscriber sendError:resultError];
+                [SWNetworkManager showErrorHUD:error];
+                [subscriber sendError:error];
                 [subscriber sendCompleted];
             }];
             return nil;
@@ -105,8 +105,8 @@ static AFHTTPSessionManager *afnManager = nil;
                 [subscriber sendCompleted];
                 [SWNetworkManager hideLoadingHUD];
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                NSError *resultError = [SWNetworkManager errorWithNetworkError:error];
-                [subscriber sendError:resultError];
+                [SWNetworkManager showErrorHUD:error];
+                [subscriber sendError:error];
                 [subscriber sendCompleted];
             }];
             return nil;
@@ -115,23 +115,23 @@ static AFHTTPSessionManager *afnManager = nil;
     return [RACSignal empty];
 }
 
-+ (NSError *)errorWithNetworkError:(NSError *)error{
-    NSData *data = error.userInfo[@"com.alamofire.serialization.response.error.data"];
-    NSDictionary *userInfo = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-    NSString *errorMsg = [userInfo objectForKey:@"msg"];
++ (void)showErrorHUD:(NSError *)error{
     [SWNetworkManager hideLoadingHUD];
-    if (errorMsg) {
-        [SWNetworkManager showErrorHUD:errorMsg];
+    NSString *errorMsg;
+    if ([error.domain isEqualToString:NSURLErrorDomain]) {
+        errorMsg = @"网络异常，请检查网络连接";
+    }else if ([error.domain isEqualToString:AFURLResponseSerializationErrorDomain]){
+        NSData *data = error.userInfo[@"com.alamofire.serialization.response.error.data"];
+        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        errorMsg = [json objectForKey:@"msg"];
+    }else{
+        errorMsg = @"未知错误";
     }
-    return [NSError errorWithDomain:@"Network" code:error.code userInfo:userInfo];
-}
-
-+ (void)showErrorHUD:(NSString *)text{
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:window animated:YES];
-    hud.label.text = text;
+    hud.label.text = errorMsg;
     hud.mode = MBProgressHUDModeText;
-    [hud hideAnimated:YES afterDelay:1];
+    [hud hideAnimated:YES afterDelay:1.5];
 }
 
 + (void)showLoadingHUD{

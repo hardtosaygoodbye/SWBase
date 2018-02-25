@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SWView.h"
 
-@interface SWTextField : UIView
+@interface SWTextField : SWView
 
 @property (nonatomic,strong) UILabel *titleLabel;
 @property (nonatomic,strong) UITextField *textField;

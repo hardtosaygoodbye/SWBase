@@ -10,12 +10,10 @@
 #import "VerifyViewModel.h"
 
 @interface VerifyViewController ()
-
-@property (nonatomic,weak) SWTextField *phoneTextField;
-@property (nonatomic,weak) SWTextField *codeTextField;
+@property (nonatomic,weak) UITextField *phoneTextField;
+@property (nonatomic,weak) UITextField *codeTextField;
 @property (nonatomic,weak) SWButton *startButton;
 @property (nonatomic,strong) VerifyViewModel *viewModel;
-
 @end
 
 @implementation VerifyViewController
@@ -28,8 +26,8 @@
 }
 
 - (void)sw_loadUI{
-    self.phoneTextField = [SWTextField textFieldWithTitle:@"手机号" fView:self.view];
-    self.codeTextField = [SWTextField textFieldWithTitle:@"验证码" fView:self.view];
+    self.phoneTextField = [SWUI textFieldWithPlaceholder:@"请输入手机号" fontsize:14 fView:self.view];
+    self.codeTextField = [SWUI textFieldWithPlaceholder:@"请输入验证码" fontsize:14 fView:self.view];
     self.startButton = [SWButton buttonWithTitle:@"开始" fontsize:14 color:kFirstColor sytle:0 fView:self.view];
 }
 
@@ -56,8 +54,8 @@
 }
 
 - (void)sw_bindViewModel{
-    RAC(self.viewModel, phone) = [RACSignal merge:@[RACObserve(self.phoneTextField.textField,text), self.phoneTextField.textField.rac_textSignal]];
-    RAC(self.viewModel, code) = [RACSignal merge:@[RACObserve(self.codeTextField.textField, text),self.codeTextField.textField.rac_textSignal]];
+    RAC(self.viewModel, phone) = [RACSignal merge:@[RACObserve(self.phoneTextField,text), self.phoneTextField.rac_textSignal]];
+    RAC(self.viewModel, code) = [RACSignal merge:@[RACObserve(self.codeTextField, text),self.codeTextField.rac_textSignal]];
     self.startButton.rac_command = self.viewModel.startCommand;
     [self.startButton.rac_command.executionSignals.switchToLatest subscribeNext:^(id  _Nullable x) {
         NSLog(@"hello:%@",x);

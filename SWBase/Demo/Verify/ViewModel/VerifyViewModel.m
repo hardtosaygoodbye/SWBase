@@ -18,6 +18,7 @@
         return @(self.phone.length > 0 && self.code.length >0);
     }] distinctUntilChanged];
     self.startCommand = [[RACCommand alloc] initWithEnabled:self.validStartSignal signalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+        @strongify(self);
         return [SWNetworkManager requestDataWithUrl:urlCheckVerify method:POST param:@{@"phone":self.phone,@"code":self.code} hud:YES];
     }];
 }
