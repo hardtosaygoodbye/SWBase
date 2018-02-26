@@ -14,8 +14,12 @@
 
 @property (nonatomic,copy) NSString *code;
 
-@property (nonatomic,strong) RACSignal *validStartSignal;
+@property (nonatomic,strong) RACSubject *getCodeTitleSubject;
 
 @property (nonatomic,strong) RACCommand *startCommand;
+
+@property (nonatomic,strong) RACCommand *getCodeCommand;
+
+@property (nonatomic,strong) NSNumber *lastSecond;
 
 @end

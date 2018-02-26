@@ -19,6 +19,6 @@ typedef NS_ENUM(NSInteger,SWButtonStyle){
 @property (nonatomic,strong) UIColor *sw_disableColor;
 @property (nonatomic,assign) SWButtonStyle sw_style;
 
-+ (SWButton *)buttonWithTitle:(NSString *)title fontsize:(CGFloat)size color:(UIColor *)color sytle:(SWButtonStyle)style fView:(UIView *)fview;
++ (SWButton *)buttonWithTitle:(NSString *)title fontsize:(CGFloat)size color:(UIColor *)color style:(SWButtonStyle)style fView:(UIView *)fview;
 
 @end
