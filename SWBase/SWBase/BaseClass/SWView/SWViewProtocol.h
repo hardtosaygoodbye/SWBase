@@ -10,6 +10,7 @@
 
 @protocol SWViewProtocol <NSObject>
 
+@optional
 - (void)sw_loadUI;
 
 - (void)sw_bindViewModel;

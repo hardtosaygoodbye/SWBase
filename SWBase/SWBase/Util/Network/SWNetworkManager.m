@@ -37,8 +37,7 @@ static AFHTTPSessionManager *afnManager = nil;
         [SWNetworkManager showLoadingHUD];
     }
     [SWNetworkManager manager];
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *token = [defaults objectForKey:@"token"];
+    NSString *token = [[NSUserDefaults standardUserDefaults] objectForKey:@"sw_token"];
     NSMutableDictionary *resultParam = [NSMutableDictionary dictionaryWithDictionary:param];
     if (token) {
         [resultParam setValue:token forKey:@"token"];

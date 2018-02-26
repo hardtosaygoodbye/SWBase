@@ -13,4 +13,6 @@
 
 @interface SWViewModel : NSObject <SWViewModelProtocol>
 
+- (instancetype)initWithModel:(NSObject *)model;
+
 @end

@@ -8,6 +8,7 @@
 
 #import "VerifyViewController.h"
 #import "VerifyViewModel.h"
+#import "BookListViewController.h"
 
 @interface VerifyViewController ()
 @property (nonatomic,weak) UITextField *phoneTextField;
@@ -70,7 +71,9 @@
         [self.getCodeButton setTitle:x forState:UIControlStateNormal];
     }];
     [self.startButton.rac_command.executionSignals.switchToLatest subscribeNext:^(id  _Nullable x) {
-        NSLog(@"hello:%@",x);
+        [[NSUserDefaults standardUserDefaults] setValue:x[@"token"] forKey:@"sw_token"];
+        BookListViewController *vc = [[BookListViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
     }];
     [self.startButton.rac_command.errors subscribeNext:^(NSError * _Nullable x) {
         NSDictionary *userInfo = x.userInfo;

@@ -10,6 +10,7 @@
 #import <Masonry.h>
 #import "SWButton.h"
 #import "SWTextField.h"
+#import "SWTableView.h"
 
 @interface SWUI : NSObject
 

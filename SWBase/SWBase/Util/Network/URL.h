@@ -11,5 +11,6 @@
 
 #define urlVerify (@"verify/")
 #define urlCheckVerify (@"checkVerify/")
+#define urlBook (@"book/")
 
 #endif /* URL_h */

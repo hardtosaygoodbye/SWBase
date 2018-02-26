@@ -18,9 +18,7 @@
 }
 
 - (instancetype)initWithModel:(NSObject *)model{
-    if (self = [super init]) {
-        [self sw_initialize];
-    }
+    self = [self init];
     return self;
 }
 
