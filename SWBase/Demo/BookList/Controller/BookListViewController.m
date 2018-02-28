@@ -25,7 +25,7 @@
 }
 
 - (void)updateViewConstraints{
-    [self.tableView makeConstraints:^(MASConstraintMaker *make) {
+    [self.tableView updateConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
     [super updateViewConstraints];

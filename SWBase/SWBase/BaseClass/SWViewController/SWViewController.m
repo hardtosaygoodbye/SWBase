@@ -9,6 +9,7 @@
 #import "SWViewController.h"
 #import <Masonry.h>
 #import "SWView.h"
+#import <MGJRouter.h>
 
 @interface SWViewController ()
 
@@ -22,6 +23,7 @@
     [self sw_loadNavigationStyle];
     [self sw_loadUI];
     [self sw_bindViewModel];
+    [self sw_loadNotification];
 }
 
 - (void)initialize {
@@ -42,5 +44,7 @@
 - (void)sw_loadUI{}
 
 - (void)sw_bindViewModel{}
+
+- (void)sw_loadNotification{}
 
 @end

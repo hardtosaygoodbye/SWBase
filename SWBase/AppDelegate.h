@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SWStartApp.h"
-#import "SWThirdService.h"
+
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

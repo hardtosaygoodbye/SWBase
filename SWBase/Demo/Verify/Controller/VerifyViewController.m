@@ -9,6 +9,7 @@
 #import "VerifyViewController.h"
 #import "VerifyViewModel.h"
 #import "BookListViewController.h"
+#import <MGJRouter.h>
 
 @interface VerifyViewController ()
 @property (nonatomic,weak) UITextField *phoneTextField;
@@ -72,13 +73,13 @@
     }];
     [self.startButton.rac_command.executionSignals.switchToLatest subscribeNext:^(id  _Nullable x) {
         [[NSUserDefaults standardUserDefaults] setValue:x[@"token"] forKey:@"sw_token"];
-        BookListViewController *vc = [[BookListViewController alloc] init];
-        [self.navigationController pushViewController:vc animated:YES];
+        [MGJRouter openURL:@"yidu://BookList"];
     }];
     [self.startButton.rac_command.errors subscribeNext:^(NSError * _Nullable x) {
         NSDictionary *userInfo = x.userInfo;
         NSLog(@"error:%@",userInfo);
     }];
+    
 }
 
 @end

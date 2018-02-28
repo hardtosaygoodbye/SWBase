@@ -15,6 +15,8 @@
     if (self = [super init]) {
         [self sw_loadUI];
         [self sw_bindViewModel];
+        [self setNeedsUpdateConstraints];
+        [self updateConstraintsIfNeeded];
     }
     return self;
 }
@@ -25,8 +27,7 @@
 }
 
 - (void)sw_loadUI{
-    [self setNeedsUpdateConstraints];
-    [self updateConstraintsIfNeeded];
+    
 }
 
 - (void)sw_bindViewModel{}

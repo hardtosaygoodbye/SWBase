@@ -38,7 +38,6 @@
     
     textField.font = [UIFont systemFontOfSize:14.0];
     self.textField = textField;
-    [super sw_loadUI];
 }
 
 - (void)updateConstraints{

@@ -15,4 +15,6 @@
 @optional
 - (instancetype)initWithModel:(NSObject *)model;
 
+- (void)sw_loadNotification;
+
 @end

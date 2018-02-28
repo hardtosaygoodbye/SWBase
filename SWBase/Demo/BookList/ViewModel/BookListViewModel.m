@@ -11,7 +11,9 @@
 @implementation BookListViewModel
 
 - (void)sw_initialize{
-    [super sw_initialize];
+    self.page = 0;
+    self.refreshUISubject = [RACSubject subject];
+    self.refreshEndSubject = [RACSubject subject];
     // 下拉刷新
     self.refreshDataCommond = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
         return [SWNetworkManager requestDataWithUrl:urlBook method:GET param:@{@"page":@0,@"keyword":@""} hud:NO];
@@ -42,6 +44,7 @@
     [self.nextPageCommond.errors subscribeNext:^(NSError * _Nullable x) {
         [self.refreshUISubject sendNext:nil];
     }];
+    [self.refreshDataCommond execute:nil];
 }
 
 @end

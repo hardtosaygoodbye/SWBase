@@ -7,5 +7,6 @@ pod 'AFNetworking'
 pod 'MJRefresh'
 pod 'ReactiveObjC'
 pod 'MBProgressHUD'
+pod 'MGJRouter'
 
 end

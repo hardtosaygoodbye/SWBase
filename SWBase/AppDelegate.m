@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "VerifyViewController.h"
 #import "BookListViewController.h"
+#import "SWStartApp.h"
+#import "SWThirdService.h"
+#import "SWRouterService.h"
 
 @interface AppDelegate ()
 

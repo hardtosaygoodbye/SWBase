@@ -17,4 +17,6 @@
 @optional
 - (void)sw_loadNavigationStyle;
 
+- (void)sw_loadNotification;
+
 @end
