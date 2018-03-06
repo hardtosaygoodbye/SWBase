@@ -79,7 +79,6 @@
         NSDictionary *userInfo = x.userInfo;
         NSLog(@"error:%@",userInfo);
     }];
-    
 }
 
 @end

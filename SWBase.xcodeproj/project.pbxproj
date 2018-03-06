@@ -84,6 +84,11 @@
 		7259638F20446DD50000BE89 /* SWTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWTableView.m; sourceTree = "<group>"; };
 		725963912046B6E20000BE89 /* SWRouterService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRouterService.h; sourceTree = "<group>"; };
 		725963922046B6E20000BE89 /* SWRouterService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWRouterService.m; sourceTree = "<group>"; };
+		72EBBA7E204E37E300AB63EE /* SystemMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemMacro.h; sourceTree = "<group>"; };
+		72EBBA7F204E386600AB63EE /* UIMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIMacro.h; sourceTree = "<group>"; };
+		72EBBA80204E3A6400AB63EE /* NetworkMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkMacro.h; sourceTree = "<group>"; };
+		72EBBA82204E7E1B00AB63EE /* ThirdPartyMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdPartyMacro.h; sourceTree = "<group>"; };
+		72EBBA83204E7F4B00AB63EE /* StorageMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StorageMacro.h; sourceTree = "<group>"; };
 		7637562B64EAC165BE031725 /* Pods-SWBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWBase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SWBase/Pods-SWBase.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -222,6 +227,7 @@
 		72195978203E8D21007E813F /* SWBase */ = {
 			isa = PBXGroup;
 			children = (
+				72EBBA7D204E376D00AB63EE /* Macro */,
 				72048268203F2322008CC286 /* Util */,
 				72195980203EA81A007E813F /* BaseClass */,
 				72195979203E8D33007E813F /* StartApp */,
@@ -347,6 +353,18 @@
 				7259638F20446DD50000BE89 /* SWTableView.m */,
 			);
 			path = SWTableView;
+			sourceTree = "<group>";
+		};
+		72EBBA7D204E376D00AB63EE /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				72EBBA7E204E37E300AB63EE /* SystemMacro.h */,
+				72EBBA7F204E386600AB63EE /* UIMacro.h */,
+				72EBBA80204E3A6400AB63EE /* NetworkMacro.h */,
+				72EBBA82204E7E1B00AB63EE /* ThirdPartyMacro.h */,
+				72EBBA83204E7F4B00AB63EE /* StorageMacro.h */,
+			);
+			path = Macro;
 			sourceTree = "<group>";
 		};
 		AF9C5C82F60560C3C9D83C08 /* Frameworks */ = {
